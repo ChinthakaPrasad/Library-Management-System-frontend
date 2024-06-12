@@ -1,1 +1,47 @@
-<p>view-all-books works!</p>
+<h2 class=" text-center">Books List</h2>
+<hr>
+<div class="table-responsive small container">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Book ID</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Authour</th>
+        <th scope="col">Catogery</th>
+        <th scope="col">QTY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookList">
+        <td>{{book.id}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.qty}}</td>
+        <td><button (click)="selectedBook(book)" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
+        <td><button><i class="bi bi-pencil-square"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Confirmation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        It will permanantly delete from your Library
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" (click)="deleteBook()" data-bs-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
