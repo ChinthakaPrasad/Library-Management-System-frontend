@@ -20,15 +20,15 @@
         <td>{{book.author}}</td>
         <td>{{book.category}}</td>
         <td>{{book.qty}}</td>
-        <td><button (click)="selectedBook(book)" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-        <td><button><i class="bi bi-pencil-square"></i></button></td>
+        <td><button class="btn btn-danger" (click)="selectedBook(book)" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash3"></i></button></td>
+        <td><button class="btn btn-info" (click)="selectedBook(book)" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="bi bi-pencil-square"></i></button></td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -45,3 +45,68 @@
     </div>
   </div>
 </div>
+
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Book Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Book ID:</label>
+            <input type="text" value={{selectBook?.id}} disabled class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">ISBN:</label>
+            <input type="text" value={{selectBook?.isbn}} disabled class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Book Title:</label>
+            <input type="text" [(ngModel)]="selectBook.title" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Author:</label>
+            <input type="text" [(ngModel)]="selectBook.author" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Catogery:</label>
+            <input type="text" [(ngModel)]="selectBook.category" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">QTY:</label>
+            <input type="number" [(ngModel)]="selectBook.qty" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateConfirmationModal" >Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal update confirmation -->
+
+<div class="modal fade" id="updateConfirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Confirmation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Update the "{{selectBook?.title}}" book?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateBook()" >Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
