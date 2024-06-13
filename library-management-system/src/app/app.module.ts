@@ -8,19 +8,25 @@ import { ViewAllBooksComponent } from './pages/view-all-books/view-all-books.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './pages/login/login.component';
+import { RouterLink } from '@angular/router';
+import { RegisterFormComponent } from './pages/register-form/register-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ViewAllBooksComponent
+    ViewAllBooksComponent,
+    LoginComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   providers: [
     provideClientHydration()
