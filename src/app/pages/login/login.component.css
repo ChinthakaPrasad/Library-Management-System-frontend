@@ -1,4 +1,4 @@
-.bd-placeholder-img {
+/* .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
   -webkit-user-select: none;
@@ -74,4 +74,29 @@
 
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
+} */
+
+.signUpSlogan {
+  position: relative;
+  bottom: -100px;
+}
+
+.signUpBTn {
+  position: relative;
+  width: 225px;
+  bottom: -50px;
+}
+.content {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-image {
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  height: 100vh;
+  opacity: 0.5;
 }

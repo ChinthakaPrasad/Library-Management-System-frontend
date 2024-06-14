@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './pages/login/login.component';
 import { RouterLink } from '@angular/router';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterFormComponent } from './pages/register-form/register-form.compo
     NavComponent,
     ViewAllBooksComponent,
     LoginComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
