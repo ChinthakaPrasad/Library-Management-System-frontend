@@ -3,4 +3,19 @@
     background-color: rgb(219, 219, 219);
 }
 
+.nav-link{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-link:hover{
+    background-color: rgb(50, 50, 219);
+    color: aliceblue;
+}
+
+.nav-link.active{
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 219);
+}
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="login.component.css" />
     <main
       class="form-signin w-50 text-center container pt-5"
-      style="border: solid 2px; background-color: rgb(47, 47, 47)"
+      style="border: solid 2px; border-radius: 30px; background-color: rgb(47, 47, 47)"
     >
       <form>
         <svg
@@ -65,8 +65,8 @@
             Remember me
           </label>
         </div>
-        <a [routerLink]="['home']"
-          ><button class="btn btn-primary w-50 py-1" type="button">
+        <a
+          ><button class="btn btn-primary w-50 py-1" type="button" (click)="loginBtnOnaction()">
             Log In
           </button></a
         >
@@ -77,7 +77,7 @@
         <button
           type="button"
           class="btn btn-primary mx-auto my-5 signUpBTn"
-          [routerLink]="['registerForm']"
+          (click)="navitageSignup()"
         >
           Sign Up
         </button>

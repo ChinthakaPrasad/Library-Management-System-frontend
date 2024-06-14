@@ -4,16 +4,16 @@
       <img src="assets/library-logo.jpg" style="width: 200px; height: 50px;" alt="logo" class="px-5">
       
       <ul class="nav nav-pills ">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" [routerLink]="['home']">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">View All Borrowers</a></li>
-        <li class="nav-item"><a href="#" class="nav-link" [routerLink]="['view-all-books']" >View All Books</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item "><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a class="nav-link" [class.active]="isHomeNavigation()" (click)="homeNavigation()">Home</a></li>
+        <li class="nav-item"><a class="nav-link" [class.active]="isViewBorrowerNavigation()"  (click)="viewBorrowerNavigation()">View All Borrowers</a></li>
+        <li class="nav-item"><a class="nav-link" [class.active]="isViewBookNavigation()" (click)="viewBookNavigation()" >View All Books</a></li>
+        <li class="nav-item"><a class="nav-link">FAQs</a></li>
+        <li class="nav-item "><a class="nav-link">About</a></li>
         
       </ul>
 
       <div class="ms-auto">
-        <button type="button" class="btn btn-primary me-3 text-end" [routerLink]="['login']">Log In</button>
+        <button type="button" class="btn btn-primary me-3 text-end" (click)="logOutNavigation()">Log Out</button>
         
       </div>
     </header>

@@ -1,0 +1,21 @@
+.bg-image {
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+.content {
+  background-color: rgb(47, 47, 47);
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  width: 50%;
+  z-index: 1;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+}

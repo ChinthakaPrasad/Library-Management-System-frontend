@@ -24,5 +24,10 @@ export class RegisterFormComponent implements OnInit{
       this.countiesList = data;
     })
   }
+  public countryCode = "";
+
+  seletedCountry(country:any){
+    this.countryCode = country.idd.root+country.idd.suffixes+" ";
+  }
 
 }

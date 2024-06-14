@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RouterLink } from '@angular/router';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-borrowers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './pages/home/home.component';
     ViewAllBooksComponent,
     LoginComponent,
     RegisterFormComponent,
-    HomeComponent
+    HomeComponent,
+    ViewAllBorrowersComponent
   ],
   imports: [
     BrowserModule,
