@@ -1,0 +1,28 @@
+.here-area{
+    position: absolute;
+    background-image: url('/assets/library-image-02.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    opacity: 0.2;
+    z-index: -1;
+    top: 0;
+
+}
+
+.carousel-inner{
+    z-index: -1;
+}
+
+.hero-section{
+    position: relative;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+
+.carousel-inner {
+    height: 500px; /* Adjust the height as needed */
+}
