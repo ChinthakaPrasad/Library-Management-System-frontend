@@ -4,11 +4,12 @@
       <img src="assets/library-logo.jpg" style="width: 200px; height: 50px;" alt="logo" class="px-5">
       
       <ul class="nav nav-pills ">
-        <li class="nav-item"><a class="nav-link" [class.active]="isHomeNavigation()" (click)="homeNavigation()">Home</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="isViewBorrowerNavigation()"  (click)="viewBorrowerNavigation()">View All Borrowers</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="isViewBookNavigation()" (click)="viewBookNavigation()" >View All Books</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="isViewBookNavigation()" (click)="viewBookNavigation()" >Offer Books</a></li>
-        <li class="nav-item "><a class="nav-link" [class.active]="isAboutNavigation()" (click)="aboutNavigation()" >About</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" [class.active]="isHomeNavigation()" (click)="homeNavigation()">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" [class.active]="isViewBorrowerNavigation()"  (click)="viewBorrowerNavigation()">View All Borrowers</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" [class.active]="isViewBookNavigation()" (click)="viewBookNavigation()" >View All Books</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" [class.active]="isOfferBookNavigation()" (click)="offerBookNavigation()" >Offer Books</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" [class.active]="isOfferHistoryNavigation()" (click)="offerHistoryNavigation()" >Offer History</a></li>
+        <li class="nav-item "><a class="nav-link fw-bold" [class.active]="isAboutNavigation()" (click)="aboutNavigation()" >About</a></li>
         
       </ul>
 

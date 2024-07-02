@@ -15,6 +15,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-borrowers.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { OfferBooksComponent } from './pages/offer-books/offer-books.component';
+import { OfferHistoryComponent } from './pages/offer-history/offer-history.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FooterComponent } from './common/footer/footer.component';
     HomeComponent,
     ViewAllBorrowersComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    OfferBooksComponent,
+    OfferHistoryComponent
   ],
   imports: [
     BrowserModule,

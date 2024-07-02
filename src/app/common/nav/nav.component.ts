@@ -46,4 +46,20 @@ export class NavComponent {
     return this.router.url.includes("about");
   }
 
+  isOfferBookNavigation():boolean{
+    return this.router.url.includes("offer-book");
+  }
+
+  offerBookNavigation():void{
+    this.router.navigateByUrl("offer-book");
+  }
+
+  isOfferHistoryNavigation():boolean{
+    return this.router.url.includes("offer-history");
+  }
+
+  offerHistoryNavigation():void{
+    this.router.navigateByUrl("offer-history");
+  }
+
 }
