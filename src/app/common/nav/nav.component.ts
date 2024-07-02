@@ -11,7 +11,7 @@ export class NavComponent {
 
   }
 
-  viewBookNavigation(){
+  viewBookNavigation():void{
     this.router.navigateByUrl("view-all-books");
   }
 
@@ -27,15 +27,23 @@ export class NavComponent {
     return this.router.url.includes("view-all-books");
   }
 
-  homeNavigation(){
+  homeNavigation():void{
     this.router.navigateByUrl("home");
   }
-  viewBorrowerNavigation(){
+  viewBorrowerNavigation():void{
     this.router.navigateByUrl("view-all-borrowers");
   }
 
-  logOutNavigation(){
+  logOutNavigation():void{
     this.router.navigateByUrl("login");
+  }
+
+  aboutNavigation():void{
+    this.router.navigateByUrl("about");
+  }
+
+  isAboutNavigation():boolean{
+    return this.router.url.includes("about");
   }
 
 }

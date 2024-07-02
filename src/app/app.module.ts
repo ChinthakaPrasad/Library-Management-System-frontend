@@ -13,6 +13,7 @@ import { RouterLink } from '@angular/router';
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-borrowers.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-b
     LoginComponent,
     RegisterFormComponent,
     HomeComponent,
-    ViewAllBorrowersComponent
+    ViewAllBorrowersComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

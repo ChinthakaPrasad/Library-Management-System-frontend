@@ -5,6 +5,7 @@ import { ViewAllBooksComponent } from './pages/view-all-books/view-all-books.com
 import { RegisterFormComponent } from './pages/register-form/register-form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-borrowers.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: "view-all-borrowers",
     component: ViewAllBorrowersComponent
+  },
+  {
+    path:"about",
+    component: AboutComponent
   }
 
 ];

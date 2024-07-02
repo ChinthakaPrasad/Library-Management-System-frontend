@@ -7,8 +7,7 @@
         <li class="nav-item"><a class="nav-link" [class.active]="isHomeNavigation()" (click)="homeNavigation()">Home</a></li>
         <li class="nav-item"><a class="nav-link" [class.active]="isViewBorrowerNavigation()"  (click)="viewBorrowerNavigation()">View All Borrowers</a></li>
         <li class="nav-item"><a class="nav-link" [class.active]="isViewBookNavigation()" (click)="viewBookNavigation()" >View All Books</a></li>
-        <li class="nav-item"><a class="nav-link">FAQs</a></li>
-        <li class="nav-item "><a class="nav-link">About</a></li>
+        <li class="nav-item "><a class="nav-link" [class.active]="isAboutNavigation()" (click)="aboutNavigation()" >About</a></li>
         
       </ul>
 
