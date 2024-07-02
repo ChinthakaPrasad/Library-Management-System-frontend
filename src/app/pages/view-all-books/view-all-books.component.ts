@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
+import { error } from 'node:console';
 
 @Component({
   selector: 'app-view-all-books',
@@ -59,5 +60,25 @@ export class ViewAllBooksComponent implements OnInit{
       });
     })
    
+  }
+
+  book = {
+    ISBN:"",
+    bookTitle:"",
+    authour:"",
+    catogery:"",
+    qty:""
+  };
+
+  onSubmit():void{
+    const url = "http://localhost:8080/book/add";
+    this.http.post(url, this.book).subscribe(response=>{
+      console.log(response);
+      Swal.fire({
+        title: "Book Added!",
+        text: "",
+        icon: "success"
+      });
+    })
   }
 }

@@ -1,5 +1,81 @@
 <app-nav></app-nav>
 <h2 class=" text-center">Books List</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <button class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addBookModal">
+        <i class="bi bi-plus-circle-fill px-2"></i>
+        Add Book</button>
+    </div>
+    <div class="col-6">
+      <input type="text" class="form-control" placeholder="Search By Title">
+    </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Book Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Book ID:</label>
+            <input type="text" value="Auto" disabled class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">ISBN:</label>
+            <input type="text" class="form-control" [(ngModel)]="book.ISBN" required id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Book Title:</label>
+            <input type="text" [(ngModel)]="book.bookTitle" required class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Author:</label>
+            <input type="text" [(ngModel)]="book.authour" required  class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Catogery:</label>
+            <input type="text" [(ngModel)]="book.catogery" required  class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">QTY:</label>
+            <input type="number" [(ngModel)]="book.qty" required class="form-control" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitConfirmationModal"  >Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="submitConfirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Submit Confirmation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Submit the "{{book?.bookTitle}}" book?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onSubmit()" >Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <hr>
 <div class="table-responsive small container">
   <table class="table table-striped table-sm">
