@@ -14,6 +14,7 @@ import { RegisterFormComponent } from './pages/register-form/register-form.compo
 import { HomeComponent } from './pages/home/home.component';
 import { ViewAllBorrowersComponent } from './pages/view-all-borrowers/view-all-borrowers.component';
 import { AboutComponent } from './pages/about/about.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutComponent } from './pages/about/about.component';
     RegisterFormComponent,
     HomeComponent,
     ViewAllBorrowersComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

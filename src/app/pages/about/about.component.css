@@ -1,7 +1,8 @@
-.here-image{
-    height: 900px;
-}
 
 .hero{
     background-color: rgb(83, 83, 83);
+}
+
+.marketing{
+    text-align: center;
 }
