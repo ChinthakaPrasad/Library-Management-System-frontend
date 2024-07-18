@@ -1,2 +1,132 @@
 <app-nav></app-nav>
-<p>offer-books works!</p>
+
+<div class="container">
+
+    <div class="col-md-8 col-lg-8 mx-auto">
+
+        
+
+        <h1 class=" fw-bold py-3 col-5 mx-auto ">Offering A Book</h1>
+        <form class="needs-validation" novalidate>
+            
+
+
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Student ID</label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+
+            <div class="col-sm-6">
+              <label for="studentId" class="form-label">User Name</label>
+              <input type="text" class="form-control" id="studentId" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="row py-2">
+              <div class="col-8">
+                <label for="qty" class="form-label">Number Of Books</label>
+                <input type="number" class="form-control" id="qty" placeholder="Books Amount" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="col-4">
+                <label for="button" class="form-label fw-bold">Confirmation here</label>
+                <button class="btn btn-primary w-100" id="button">Confirm</button>
+              </div>
+              </div>
+
+              <div class="row py-3">
+                <div class="col-sm-6">
+                    <label for="country" class="form-label">Select Book</label>
+                    <select class="form-select" id="country" required>
+                      <option value="">Choose Title</option>
+                      <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+    
+                  
+        
+                <div class="col-sm-6">
+                  <label for="username" class="form-label">Book Id</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="username" placeholder="Book ID" required>
+                  <div class="invalid-feedback">
+                      The Book ID is required.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            
+
+
+            <div class="col-12">
+                <label for="email" class="form-label">Phone Number</label>
+                <input type="email" class="form-control" id="email" placeholder="Mobile Number" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+      
+    
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+    
+    
+          </div>
+    
+          <hr class="my-4">
+    
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Offer Book</button>
+        </form>
+      </div>
+    
+
+</div>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <label for="datepicker">Select Date:</label>
+        <input type="text" class="form-control" id="datepicker" placeholder="Select a date">
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $('#datepicker').datepicker({
+        format: 'mm/dd/yyyy',
+        todayHighlight: true,
+        autoclose: true
+      });
+    });
+  </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

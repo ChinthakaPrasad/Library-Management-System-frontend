@@ -46,7 +46,14 @@ export class ViewAllBorrowersComponent implements OnInit{
     })
   }
 
-
+student = {
+  studentId:"",
+  studentName:"",
+  email:"",
+  country:"",
+  phoneNumber:"",
+  remark:""
+};
 
 
   
